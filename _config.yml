@@ -3,7 +3,7 @@
 #
 
 # Name of your site (displayed in the header)
-name: Leonid Keselman
+name: Jason Chen
 
 # Short bio or description (displayed in the header)
 # description: the profile of an engineer, researcher and software developer
@@ -18,11 +18,11 @@ avatar: images/circle_bw_crop.jpg
 # Includes an icon in the footer for each username you enter
 footer-links:
   dribbble:
-  email: lkeselman@gmail.com
+  email: jchen567@usc.edu
   facebook:
   flickr:
-  github: leonidk
-  instagram: leo_nid_k
+  github: jasoon_chen
+  instagram:
   linkedin:
   pinterest:
   rss: # just type anything here for a working RSS icon
