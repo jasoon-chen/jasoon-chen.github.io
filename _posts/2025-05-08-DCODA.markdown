@@ -6,8 +6,8 @@ image: /videos/DCODA1.mp4
 categories: research
 author: "I-Chun (Arthur) Liu, Jason Chen, Gaurav S. Sukhatme†, Daniel Seita†"
 authors: "I-Chun (Arthur) Liu, <strong>Jason Chen</strong>, Gaurav S. Sukhatme†, Daniel Seita†"
-venue: "In Review"
-# arxiv: https://arxiv.org/abs/2308.14737
+venue: "Conference on Robot Learning (CoRL)"
+arxiv: https://arxiv.org/abs/2505.04860
 # code: https://github.com/leonidk/fmb-plus
 website: https://dcodaaug.github.io/D-CODA/
 ---
