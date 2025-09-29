@@ -1,0 +1,14 @@
+---
+layout: post
+title:  "ROPA: Synthetic Robot Pose Generation for RGB-D Bimanual Data Augmentation"
+date:   2025-09-28 22:21:59 +00:00
+image: /videos/ROPA.mp4
+categories: research
+author: "Jason Chen, I-Chun (Arthur) Liu, Gaurav S. Sukhatme, Daniel Seita"
+authors: "<strong>Jason Chen</strong>, I-Chun (Arthur) Liu, Gaurav S. Sukhatme, Daniel Seita"
+venue: "In Review"
+arxiv: https://arxiv.org/abs/2509.19454
+# code: https://github.com/leonidk/fmb-plus
+website: https://ropaaug.github.io/
+---
+ROPA is a data augmentation method for bimanual imitation learning that generates 3rd person robot poses. 
