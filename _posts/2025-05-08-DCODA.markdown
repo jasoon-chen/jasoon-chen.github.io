@@ -2,7 +2,7 @@
 layout: post
 title:  "D-CODA: Diffusion for Coordinated Dual-Arm Data Augmentation"
 date:   2025-05-08 22:21:59 +00:00
-image: /videos/D-CODA.mp4
+image: /videos/D-CODA.gif
 categories: research
 author: "I-Chun (Arthur) Liu, Jason Chen, Gaurav S. Sukhatme, Daniel Seita"
 authors: "I-Chun (Arthur) Liu, <strong>Jason Chen</strong>, Gaurav S. Sukhatme, Daniel Seita"
