@@ -2,7 +2,7 @@
 layout: post
 title:  "ROPA: Synthetic Robot Pose Generation for RGB-D Bimanual Data Augmentation"
 date:   2026-01-30 22:21:59 +00:00
-image: /videos/ROPA.mp4
+image: /videos/ROPA.gif
 categories: research
 author: "Jason Chen, I-Chun (Arthur) Liu, Gaurav S. Sukhatme, Daniel Seita"
 authors: "<strong>Jason Chen</strong>, I-Chun (Arthur) Liu, Gaurav S. Sukhatme, Daniel Seita"

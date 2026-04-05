@@ -13,13 +13,14 @@
 /* BASE RULES */
 /**************/
 a {
-  color: #1772d0;
+  color: #4f46e5;
   text-decoration: none;
+  transition: color 0.2s ease;
 }
 
 a:focus,
 a:hover {
-  color: #f09228;
+  color: #3730a3;
   text-decoration: none;
 }
 
@@ -99,7 +100,67 @@ span.highlight {
   background-color: #ffffd0;
 }
 
+.research-card:hover {
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1) !important;
+}
+
+.badge-link {
+  display: inline-flex;
+  align-items: center;
+  padding: 6px 14px;
+  border-radius: 20px;
+  background-color: #f5f5f5;
+  color: #444 !important;
+  text-decoration: none !important;
+  font-size: 13px;
+  font-weight: 500;
+  border: 1px solid #eaeaea;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.badge-link:hover {
+  background-color: #6366f1 !important;
+  background: linear-gradient(135deg, #6366f1, #db2777);
+  color: #fff !important;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(99, 102, 241, 0.25);
+  border-color: transparent;
+}
+
 // Settled on moving the import of syntax highlighting to the bottom of the CSS
 // ... Otherwise it really bloats up the top of the CSS file and makes it difficult to find the start
 //@import "highlights";
 //@import "svg-icons";
+
+.header-link {
+  color: #444 !important;
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.header-link:hover, .header-link:focus, .header-link:active {
+  color: #db2777 !important;
+}
+
+.header-link svg {
+  width: 16px;
+  height: 16px;
+  margin-right: 4px;
+  fill: currentColor;
+}
+
+.gradient-text {
+  background: linear-gradient(135deg, #6366f1, #db2777);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  display: inline-block;
+}
+
+body {
+  background: linear-gradient(135deg, #f8fafc 0%, #ffffff 50%, #fdf2f8 100%);
+  background-attachment: fixed;
+}
