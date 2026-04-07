@@ -7,7 +7,7 @@ categories: research
 author: "Jason Chen, I-Chun (Arthur) Liu, Gaurav S. Sukhatme, Daniel Seita"
 authors: "<strong>Jason Chen</strong>, I-Chun (Arthur) Liu, Gaurav S. Sukhatme, Daniel Seita"
 venue: "In Submission"
-# arxiv: https://arxiv.org/abs/2509.19454
+arxiv: https://arxiv.org/abs/2604.03552
 # code: https://github.com/leonidk/fmb-plus
 website: https://craftaug.github.io/
 ---
