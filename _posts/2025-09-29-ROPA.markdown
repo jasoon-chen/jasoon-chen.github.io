@@ -5,7 +5,7 @@ date:   2026-01-30 22:21:59 +00:00
 image: /videos/ROPA.gif
 categories: research
 author: "Jason Chen, I-Chun (Arthur) Liu, Gaurav S. Sukhatme, Daniel Seita"
-authors: "<strong>Jason Chen</strong>, I-Chun (Arthur) Liu, Gaurav S. Sukhatme, Daniel Seita"
+authors: "<strong>Jason Chen</strong>, <a href='https://arthurliu.com/' style='color:inherit;' target='_blank'>I-Chun (Arthur) Liu</a>, <a href='https://uscresl.org/principal-investigator/' style='color:inherit;' target='_blank'>Gaurav S. Sukhatme</a>, <a href='https://danielseita.github.io/' style='color:inherit;' target='_blank'>Daniel Seita</a>"
 venue: "International Conference on Robotics and Automation (ICRA)"
 arxiv: https://arxiv.org/abs/2509.19454
 # code: https://github.com/leonidk/fmb-plus
