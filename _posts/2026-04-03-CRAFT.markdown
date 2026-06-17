@@ -6,7 +6,7 @@ image: /videos/CRAFT.mp4
 categories: research
 author: "Jason Chen, I-Chun (Arthur) Liu, Gaurav S. Sukhatme, Daniel Seita"
 authors: "<strong>Jason Chen</strong>, <a href='https://arthurliu.com/' style='color:inherit;' target='_blank'>I-Chun (Arthur) Liu</a>, <a href='https://uscresl.org/principal-investigator/' style='color:inherit;' target='_blank'>Gaurav S. Sukhatme</a>, <a href='https://danielseita.github.io/' style='color:inherit;' target='_blank'>Daniel Seita</a>"
-venue: "In Submission"
+venue: "International Conference on Intelligent Robots and Systems (IROS)"
 arxiv: https://arxiv.org/abs/2604.03552
 # code: https://github.com/leonidk/fmb-plus
 website: https://craftaug.github.io/
