@@ -1,12 +1,13 @@
 ---
 layout: post
 title:  "CRAFT: Video Diffusion for Bimanual Robot Data Generation"
-date:   2026-04-03 22:21:59 +00:00
+date:   2026-02-15 22:21:59 +00:00
 image: /videos/CRAFT.mp4
 categories: research
 author: "Jason Chen, I-Chun (Arthur) Liu, Gaurav S. Sukhatme, Daniel Seita"
-authors: "<strong>Jason Chen</strong>, <a href='https://arthurliu.com/' style='color:inherit;' target='_blank'>I-Chun (Arthur) Liu</a>, <a href='https://uscresl.org/principal-investigator/' style='color:inherit;' target='_blank'>Gaurav S. Sukhatme</a>, <a href='https://danielseita.github.io/' style='color:inherit;' target='_blank'>Daniel Seita</a>"
-venue: "International Conference on Intelligent Robots and Systems (IROS)"
+authors: "<strong>Jason Chen</strong>, <a href='https://arthurliu.com/' class='author-link' target='_blank'>I-Chun (Arthur) Liu</a>, <a href='https://uscresl.org/principal-investigator/' class='author-link' target='_blank'>Gaurav S. Sukhatme</a>, <a href='https://danielseita.github.io/' class='author-link' target='_blank'>Daniel Seita</a>"
+venue: "International Conference on Intelligent Robots and Systems (IROS), 2026"
+award: "Best Paper at WORLDS: World Models and Spatial Intelligence for Physical AI"
 arxiv: https://arxiv.org/abs/2604.03552
 # code: https://github.com/leonidk/fmb-plus
 website: https://craftaug.github.io/

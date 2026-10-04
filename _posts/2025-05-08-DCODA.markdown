@@ -5,8 +5,8 @@ date:   2025-05-08 22:21:59 +00:00
 image: /videos/D-CODA.gif
 categories: research
 author: "I-Chun (Arthur) Liu, Jason Chen, Gaurav S. Sukhatme, Daniel Seita"
-authors: "<a href='https://arthurliu.com/' style='color:inherit;' target='_blank'>I-Chun (Arthur) Liu</a>, <strong>Jason Chen</strong>, <a href='https://uscresl.org/principal-investigator/' style='color:inherit;' target='_blank'>Gaurav S. Sukhatme</a>, <a href='https://danielseita.github.io/' style='color:inherit;' target='_blank'>Daniel Seita</a>"
-venue: "Conference on Robot Learning (CoRL)"
+authors: "<a href='https://arthurliu.com/' class='author-link' target='_blank'>I-Chun (Arthur) Liu</a>, <strong>Jason Chen</strong>, <a href='https://uscresl.org/principal-investigator/' class='author-link' target='_blank'>Gaurav S. Sukhatme</a>, <a href='https://danielseita.github.io/' class='author-link' target='_blank'>Daniel Seita</a>"
+venue: "Conference on Robot Learning (CoRL), 2025"
 arxiv: https://arxiv.org/abs/2505.04860
 # code: https://github.com/leonidk/fmb-plus
 website: https://dcodaaug.github.io/D-CODA/

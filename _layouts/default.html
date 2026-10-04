@@ -27,7 +27,7 @@
 
 <body>
   <div id="scroll-progress"></div>
-  <table style="width:100%;max-width:800px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+  <table style="width:100%;max-width:1000px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
     <tr style="padding:0px">
       <td style="padding:0px">
         <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
@@ -76,7 +76,7 @@
         <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
           <tr>
             <td style="padding:2.5%;width:100%;vertical-align:middle">
-              <h2>Research</h2>
+              <h2>Selected Publications</h2>
               <div style="width: 40px; height: 3px; background: linear-gradient(135deg, #6366f1, #db2777); margin-top: 8px; margin-bottom: 12px;"></div>
               <p style="color: #666; font-size: 14px;">
                 * indicates equal contribution. † indicates equal advising.
@@ -85,14 +85,14 @@
           </tr>
         </table>
 
-        <div style="display: flex; flex-direction: column; gap: 24px; max-width: 800px; margin: 0 auto; padding: 0 2.5%;">
+        <div style="display: flex; flex-direction: column; gap: 24px; max-width: 1000px; margin: 0 auto; padding: 0 2.5%;">
           {% for post in site.posts %}
           {% if post.categories contains 'research' %}
           <div class="research-card" style="display: flex; flex-direction: row; border: 1px solid #eaeaea; border-radius: 12px; overflow: hidden; background-color: #ffffff; box-shadow: 0 2px 8px rgba(0,0,0,0.04); padding: 16px; gap: 24px; align-items: center; transition: box-shadow 0.3s ease;">
             <div style="flex: 0 0 42%; display: flex; align-items: center; justify-content: center; overflow: hidden; border-radius: 8px;">
               {% if post.image %}
                 {% if post.image contains '.mp4' %}
-                <video class="res-vid" src="{{ site.baseurl }}{{post.image}}" style="width:100%; height:auto; object-fit: cover; border-radius: 6px;" autoplay muted loop playsinline></video>
+                <video class="res-vid lazy-vid" data-src="{{ site.baseurl }}{{post.image}}" style="width:100%; height:auto; object-fit: cover; border-radius: 6px; background:#f0f0f0;" muted loop playsinline preload="none"></video>
                 {% else %}
                 <img class="res-vid" src="{{ site.baseurl }}{{post.image}}" style="width:100%; height:auto; object-fit: cover; border-radius: 6px;" alt="{{ post.title }}">
                 {% endif %}
@@ -104,11 +104,16 @@
               <h3 style="font-size: 16px; margin-bottom: 6px; color: #111; font-weight: 700;">{{post.title}}</h3>
               <p style="font-size: 14px; margin-bottom: 2px; color: #444; line-height: 1.4;">{{post.authors}}</p>
               <p style="font-size: 12px; margin-bottom: 6px; color: #666; line-height: 1.3;">{{post.content | strip_html}}</p>
-              <p style="font-size: 13px; margin-bottom: 12px; color: #4f46e5;"><em>{{post.venue}}</em>{% if post.date %}, {{ post.date | date: "%Y" }}{% endif %}</p>
-              
+              <p style="font-size: 13px; margin: 0 0 {% if post.award %}2{% else %}12{% endif %}px; color: #4f46e5;"><em>{{post.venue}}</em></p>
+              {% if post.award %}
+              <p style="font-size: 13px; margin: 0 0 12px; color: #dc2626; font-weight: 600;">{{post.award}}</p>
+              {% endif %}
+
               <div style="display: flex; gap: 8px; flex-wrap: wrap;">
                 {% if post.arxiv %}
-                <a class="badge-link" href="{{post.arxiv}}"><svg style="width:14px;height:14px;margin-right:6px;fill:#666;" viewBox="0 0 24 24"><path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/></svg> arXiv</a>
+                <a class="badge-link{% if post.arxiv_muted %} badge-link-muted{% endif %}" href="{{post.arxiv}}"><svg style="width:14px;height:14px;margin-right:6px;fill:#666;" viewBox="0 0 24 24"><path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/></svg> Paper</a>
+                {% elsif post.arxiv_muted %}
+                <span class="badge-link badge-link-muted" style="cursor: default;"><svg style="width:14px;height:14px;margin-right:6px;fill:#666;" viewBox="0 0 24 24"><path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/></svg> Paper</span>
                 {% endif %}
                 {% if post.code %}
                 <a class="badge-link" href="{{post.code}}"><svg style="width:14px;height:14px;margin-right:6px;fill:#666;" viewBox="0 0 24 24"><path d="M9.4 16.6L4.8 12l4.6-4.6L8 6l-6 6 6 6 1.4-1.4zm5.2 0l4.6-4.6-4.6-4.6L16 6l6 6-6 6-1.4-1.4z"/></svg> Code</a>
@@ -135,10 +140,19 @@
         <br>
         <br>
         <br>
-        <div style="padding: 0 2.5%; max-width: 800px; margin: 0 auto; margin-bottom: 24px;">
+        <div style="padding: 0 2.5%; max-width: 1000px; margin: 0 auto; margin-bottom: 24px;">
           <h2 style="font-size: 26px; font-weight: 700; color: #111;">Awards</h2>
           <div style="width: 40px; height: 4px; background: linear-gradient(135deg, #6366f1, #db2777); margin-top: 8px; margin-bottom: 16px; border-radius: 2px;"></div>
           <ul style="list-style-type: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 8px;">
+            <li style="display: flex; align-items: baseline; font-size: 15px; color: #444; padding-bottom: 4px;">
+              <div style="flex: 1;"><strong style="color: #111;">Best Paper</strong> at <a href="https://worlds-iros2026.github.io/" style="font-weight: 600;">WORLDS: World Models and Spatial Intelligence for Physical AI</a><span style="color: #888;">, 2026</span></div>
+            </li>
+            <li style="display: flex; align-items: baseline; font-size: 15px; color: #444; padding-bottom: 4px;">
+              <div style="flex: 1;"><strong style="color: #111;">Outstanding Paper</strong> at <a href="https://bimanual-robot-learning.github.io/" style="font-weight: 600;">Scaling vs. Structure? Rethinking Bimanual Manipulation Beyond Single-Arm Policies</a><span style="color: #888;">, 2026</span></div>
+            </li>
+            <li style="display: flex; align-items: baseline; font-size: 15px; color: #444; padding-bottom: 4px;">
+              <div style="flex: 1;"><strong style="color: #111;">Oral Paper</strong> at <a href="https://www.ai-meets-autonomy.com/" style="font-weight: 600;">3rd AI Meets Autonomy: Vision, Language, and Autonomous Systems Workshop</a><span style="color: #888;">, 2026</span></div>
+            </li>
             <li style="display: flex; align-items: baseline; font-size: 15px; color: #444; padding-bottom: 4px;">
               <div style="flex: 1;"><strong style="color: #111;"><a href="https://cra.org/about/awards/outstanding-undergraduate-researcher-award/" style="font-weight: 600;">CRA Outstanding Researcher: Honorable Mention</a></strong><span style="color: #888;">, 2025</span></div>
             </li>
@@ -156,12 +170,18 @@
 
         <br>
 
-        <div style="padding: 0 2.5%; max-width: 800px; margin: 0 auto; margin-bottom: 24px;">
+        <div style="padding: 0 2.5%; max-width: 1000px; margin: 0 auto; margin-bottom: 24px;">
           <h2 style="font-size: 26px; font-weight: 700; color: #111;">Services</h2>
           <div style="width: 40px; height: 4px; background: linear-gradient(135deg, #6366f1, #db2777); margin-top: 8px; margin-bottom: 16px; border-radius: 2px;"></div>
           <ul style="list-style-type: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 8px;">
             <li style="display: flex; align-items: baseline; font-size: 15px; color: #444; padding-bottom: 4px;">
-              <div style="flex: 1;"><strong style="color: #111;"><a href="https://2026.ieee-icra.org/" style="font-weight: 600;">ICRA Reviewer</a></strong><span style="color: #888;">, 2026</span></div>
+              <div style="flex: 1;"><strong style="color: #111;"><a href="https://2026.ieee-iros.org/" style="font-weight: 600;">IROS Session Chair</a></strong><span style="color: #888;">, Sensing and Predicting Human Motion for Robots, 2026</span></div>
+            </li>
+            <li style="display: flex; align-items: baseline; font-size: 15px; color: #444; padding-bottom: 4px;">
+              <div style="flex: 1;"><strong style="color: #111;"><a href="https://2026.ieee-iros.org/" style="font-weight: 600;">IROS Session Co-Chair</a></strong><span style="color: #888;">, Representation Learning for Robot Manipulation and Locomotion, 2026</span></div>
+            </li>
+            <li style="display: flex; align-items: baseline; font-size: 15px; color: #444; padding-bottom: 4px;">
+              <div style="flex: 1;"><strong style="color: #111;"><a href="https://2026.ieee-icra.org/" style="font-weight: 600;">ICRA Reviewer</a></strong><span style="color: #888;">, 2026, 2027</span></div>
             </li>
             <li style="display: flex; align-items: baseline; font-size: 15px; color: #444; padding-bottom: 4px;">
               <div style="flex: 1;"><strong style="color: #111;"><a href="https://2026.ieee-iros.org/" style="font-weight: 600;">IROS Reviewer</a></strong><span style="color: #888;">, 2026</span></div>
@@ -176,8 +196,7 @@
         </div>
 
         <div style="text-align: center; margin-top: 60px; padding-top: 24px; border-top: 1px solid #eaeaea; color: #999; font-size: 14px;">
-          Inspired by the template <a href="https://jonbarron.info" style="color: #999; text-decoration: underline; font-weight: 500;">here</a>.
-          <span id="last-updated" style="margin-left: 4px;"></span>
+          <span id="last-updated"></span>
         </div>
       </td>
     </tr>
@@ -211,5 +230,23 @@
   const formattedDate = `${month} ${day}${getDaySuffix(day)}, ${year}`;
   document.getElementById('last-updated').textContent = 'Last updated: ' + formattedDate;
 </script>
-</html>
 
+<script>
+  const lazyVideos = document.querySelectorAll('video.lazy-vid');
+  const videoObserver = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const video = entry.target;
+        if (video.dataset.src) {
+          video.src = video.dataset.src;
+          video.removeAttribute('data-src');
+          video.load();
+          video.play().catch(() => {});
+        }
+        observer.unobserve(video);
+      }
+    });
+  }, { rootMargin: '300px 0px' });
+  lazyVideos.forEach(video => videoObserver.observe(video));
+</script>
+</html>
