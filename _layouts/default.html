@@ -112,8 +112,8 @@
               <div style="display: flex; gap: 8px; flex-wrap: wrap;">
                 {% if post.arxiv %}
                 <a class="badge-link{% if post.arxiv_muted %} badge-link-muted{% endif %}" href="{{post.arxiv}}"><svg style="width:14px;height:14px;margin-right:6px;fill:#666;" viewBox="0 0 24 24"><path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/></svg> Paper</a>
-                {% elsif post.arxiv_muted %}
-                <span class="badge-link badge-link-muted" style="cursor: default;"><svg style="width:14px;height:14px;margin-right:6px;fill:#666;" viewBox="0 0 24 24"><path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/></svg> Paper</span>
+                {% elsif post.arxiv_placeholder %}
+                <span class="badge-link" style="cursor: default;"><svg style="width:14px;height:14px;margin-right:6px;fill:#666;" viewBox="0 0 24 24"><path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/></svg> Paper</span>
                 {% endif %}
                 {% if post.code %}
                 <a class="badge-link" href="{{post.code}}"><svg style="width:14px;height:14px;margin-right:6px;fill:#666;" viewBox="0 0 24 24"><path d="M9.4 16.6L4.8 12l4.6-4.6L8 6l-6 6 6 6 1.4-1.4zm5.2 0l4.6-4.6-4.6-4.6L16 6l6 6-6 6-1.4-1.4z"/></svg> Code</a>

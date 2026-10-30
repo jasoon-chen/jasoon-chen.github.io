@@ -7,7 +7,7 @@ categories: research
 author: "I-Chun (Arthur) Liu, Jason Chen, Gaurav S. Sukhatme, Daniel Seita"
 authors: "<a href='https://arthurliu.com/' class='author-link' target='_blank'>I-Chun (Arthur) Liu</a>*, <strong>Jason Chen</strong>*, <a href='https://uscresl.org/principal-investigator/' class='author-link' target='_blank'>Gaurav S. Sukhatme</a>, <a href='https://danielseita.github.io/' class='author-link' target='_blank'>Daniel Seita</a>"
 venue: "In Submission, 2027"
-arxiv: /pdfs/ExStereo_arXiv2027.pdf
+arxiv: https://arxiv.org/abs/2610.04805
 website: https://exstereo-vla.github.io/ExStereo/
 ---
 ExStereo lifts pretrained 2D vision-language-action models to 3D by rendering stereo image pairs into an explicit multi-view stereo representation that the policy attends to for more precise robotic manipulation.

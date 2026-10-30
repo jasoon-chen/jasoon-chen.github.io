@@ -7,7 +7,7 @@ categories: research
 author: "Yunshuang Li, Xinyi Yu, Jason Chen, Changyang Zhang, Faiz Aladin, Gaurav S. Sukhatme, Daniel Seita"
 authors: "<a href='https://li-yunshuang.github.io/' class='author-link' target='_blank'>Yunshuang Li</a>*, <a href='https://xinyi-yu.github.io/' class='author-link' target='_blank'>Xinyi Yu</a>*, <strong><a href='https://jasoonchen.com' class='author-link' target='_blank'>Jason Chen</a></strong>*, <a href='https://www.linkedin.com/in/changyang-zhang-351221329/' class='author-link' target='_blank'>Changyang Zhang</a>, <a href='https://faizaladin.github.io/' class='author-link' target='_blank'>Faiz Aladin</a>, <a href='https://uscresl.org/principal-investigator/' class='author-link' target='_blank'>Gaurav S. Sukhatme</a>, <a href='https://danielseita.github.io/' class='author-link' target='_blank'>Daniel Seita</a>"
 venue: "In Submission, 2027"
-arxiv_muted: true
+arxiv_placeholder: true
 website: https://birepo.github.io/
 ---
 BiREPO learns goal-conditioned bimanual nonprehensile primitives for pushing, rotating, and flipping diverse objects, enabling zero-shot sim-to-real transfer and multi-step object pose reconfiguration.
